@@ -1,5 +1,7 @@
 # Site Settings
+# 블로그 이름
 name: 데이터의 민족
+# 홈페이지 도메인 이름
 title: 데이터의 민족
 description: Jekflix is a template for Jekyll inspired by Netflix and made by
   Thiago Rossener.
