@@ -26,12 +26,13 @@ menu:
 email: martusbang@naver.com
 # See: https://disqus.com/
 disqus_username: disqus_username
-# Contact Form Setting
+
+# Contact Form Setting (블로그레 연락처 양식 추가)
 # See: https://formspree.io/
 formspree_form_id: formspree_form_id
 
 
-# Social Media Settings
+# Social Media Settings (블로그 소셜 미디어 링크 추가)
 # Remove the item if you don't need it
 github_username: github_username
 facebook_username: facebook_username
@@ -41,10 +42,13 @@ linkedin_username: linkedin_username
 medium_username: medium_username
 
 
-# Posts Settings
+# Posts Settings (게시물 관련 설정)
+# 시간 표시 줄
 show_time_bar: true
+# 모달 창
 show_modal_on_exit: false
 show_modal_on_finish_post: true
+# 두 개의 열 레이아웃
 two_columns_layout: true
 
 
@@ -57,7 +61,7 @@ categories_folder: category
 sent_message_url: "/contact/message-sent/"
 
 
-# Build settings
+# Build settings (빌드 설정)
 markdown: kramdown
 highlighter: rouge
 permalink: /:title/
@@ -86,16 +90,16 @@ paginate_content:
     single:
       is_generated: true
 
-# SASS
+# SASS (CSS 압축 여부)
 sass:
   style: compressed
 
-# Plugins
+# Plugins (사용할 플러그인)
 plugins:
   - jekyll-paginate
   - jekyll-paginate-content
 
-# Exclude my node related stuff
+# Exclude my node related stuff (빌드에서 제외할 파일 및 디렉터리)
 exclude: [
   'docs/',
   'vendor/',
