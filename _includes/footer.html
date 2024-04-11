@@ -1,91 +1,120 @@
-<footer>
-    <p>
-      {% if site.github_username %}
-        <a href="https://github.com/{{ site.github_username }}" title="Github">
-          <svg><use xlink:href="#icon-github"></use></svg>
-        </a>
-      {% endif %}
-      {% if site.facebook_username %}
-        <a href="https://www.facebook.com/{{ site.facebook_username }}" title="Facebook">
-          <svg><use xlink:href="#icon-facebook"></use></svg>
-        </a>
-      {% endif %}
-      {% if site.twitter_username %}
-        <a href="https://twitter.com/{{ site.twitter_username }}" title="Twitter">
-          <svg><use xlink:href="#icon-twitter"></use></svg>
-        </a>
-      {% endif %}
-      {% if site.medium_username %}
-        <a href="https://medium.com/@{{ site.medium_username }}" title="Medium">
-          <svg><use xlink:href="#icon-medium"></use></svg>
-        </a>
-      {% endif %}
-      {% if site.instagram_username %}
-        <a href="https://www.instagram.com/{{ site.instagram_username }}" title="Instagram">
-          <svg><use xlink:href="#icon-instagram"></use></svg>
-        </a>
-      {% endif %}
-      {% if site.linkedin_username %}
-        <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" title="LinkedIn">
-          <svg><use xlink:href="#icon-linkedin"></use></svg>
-        </a>
-      {% endif %}
-    </p>
+		<!-- Footer -->
+			<div id="footer-wrapper">
+				<section id="footer" class="container">
+					<div class="row">
+						<div class="8u">
+							<section>
+								<header>
+									<h2>Blandit nisl adipiscing</h2>
+								</header>
+								<ul class="dates">
+								{% for post in site.posts offset: 0 limit: 5 %}
+									<li>
+										<span class="date">{{ post.date | date: "%B"}} <strong>{{ post.date | date: "%d"}}</strong></span>
+										<h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+										{{ post.excerpt }}
+									</li>
+								{% endfor %}
+								</ul>
+							</section>
+						</div>
+						<div class="4u">
+							<section>
+								<header>
+									<h2>What's this all about?</h2>
+								</header>
+								<a href="#" class="image featured"><img src="{{ site.baseurl }}/assets/images/pic10.jpg" alt="" /></a>
+								<p>
+									This is <strong>Dopetrope</strong> a free, fully responsive HTML5 site template by
+									<a href="http://n33.co">AJ</a> for <a href="http://html5up.net/">HTML5 UP</a> It's released for free under
+									the <a href="http://html5up.net/license/">Creative Commons Attribution</a> license so feel free to use it for any personal or commercial project &ndash; just don't forget to credit us!
+								</p>
+								<footer>
+									<a href="#" class="button">Find out more</a>
+								</footer>
+							</section>
+						</div>
+					</div>
+					<div class="row">
+						<div class="4u">
+							<section>
+								<header>
+									<h2>Tempus consequat</h2>
+								</header>
+								<ul class="divided">
+									<li><a href="#">Lorem ipsum dolor sit amet sit veroeros</a></li>
+									<li><a href="#">Sed et blandit consequat sed tlorem blandit</a></li>
+									<li><a href="#">Adipiscing feugiat phasellus sed tempus</a></li>
+									<li><a href="#">Hendrerit tortor vitae mattis tempor sapien</a></li>
+									<li><a href="#">Sem feugiat sapien id suscipit magna felis nec</a></li>
+									<li><a href="#">Elit class aptent taciti sociosqu ad litora</a></li>
+								</ul>
+							</section>
+						</div>
+						<div class="4u">
+							<section>
+								<header>
+									<h2>Ipsum et phasellus</h2>
+								</header>
+								<ul class="divided">
+									<li><a href="#">Lorem ipsum dolor sit amet sit veroeros</a></li>
+									<li><a href="#">Sed et blandit consequat sed tlorem blandit</a></li>
+									<li><a href="#">Adipiscing feugiat phasellus sed tempus</a></li>
+									<li><a href="#">Hendrerit tortor vitae mattis tempor sapien</a></li>
+									<li><a href="#">Sem feugiat sapien id suscipit magna felis nec</a></li>
+									<li><a href="#">Elit class aptent taciti sociosqu ad litora</a></li>
+								</ul>
+							</section>
+						</div>
+						<div class="4u">
+							<section>
+								<header>
+									<h2>Vitae tempor lorem</h2>
+								</header>
+								<ul class="social">
+									<li><a class="icon fa-facebook" href="#"><span class="label">Facebook</span></a></li>
+									<li><a class="icon fa-twitter" href="#"><span class="label">Twitter</span></a></li>
+									<li><a class="icon fa-dribbble" href="#"><span class="label">Dribbble</span></a></li>
+									<li><a class="icon fa-linkedin" href="#"><span class="label">LinkedIn</span></a></li>
+									<li><a class="icon fa-google-plus" href="#"><span class="label">Google+</span></a></li>
+								</ul>
+								<ul class="contact">
+									<li>
+										<h3>Address</h3>
+										<p>
+											Untitled Incorporated<br />
+											1234 Somewhere Road Suite<br />
+											Nashville, TN 00000-0000
+										</p>
+									</li>
+									<li>
+										<h3>Mail</h3>
+										<p><a href="#">someone@untitled.tld</a></p>
+									</li>
+									<li>
+										<h3>Phone</h3>
+										<p>(800) 000-0000</p>
+									</li>
+								</ul>
+							</section>
+						</div>
+					</div>
+					<div class="row">
+						<div class="12u">
 
-    {% include links.html %}
+							<!-- Copyright -->
+								<div id="copyright">
+									<ul class="links">
+										<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+										<li>Demo Images: <a href="http://facebook.com/DreametryDoodle">Dreametry Doodle</a></li>
+										<li> Jekyll Template: <a href="http://cloudcannon.com">Cloud Cannon</a></li>
+									</ul>
+								</div>
 
-    <p>
-      <span>Jekflix</span> was made with <svg class="love"><use xlink:href="#icon-heart"></use></svg> by <a href="https://rossener.com" target="_blank" class="creator">Thiago Rossener</a>
-    </p>
-</footer>
+						</div>
+					</div>
+				</section>
+			</div>
 
-{% assign social_urls = '' %}
-{% if site.github_username %}
-    {% assign social_urls = social_urls | append: '"https://github.com/' | append: site.github_username | append: '",' %}
-{% endif %}
-{% if site.facebook_username %}
-    {% assign social_urls = social_urls | append: '"https://www.facebook.com/' | append: site.facebook_username | append: '",' %}
-{% endif %}
-{% if site.twitter_username %}
-    {% assign social_urls = social_urls | append: '"https://twitter.com/' | append: site.twitter_username | append: '",' %}
-{% endif %}
-{% if site.medium_username %}
-    {% assign social_urls = social_urls | append: '"https://medium.com/@' | append: site.medium_username | append: '",' %}
-{% endif %}
-{% if site.instagram_username %}
-    {% assign social_urls = social_urls | append: '"https://www.instagram.com/' | append: site.instagram_username | append: '",' %}
-{% endif %}
-{% if site.linkedin_username %}
-    {% assign social_urls = social_urls | append: '"https://www.linkedin.com/in/' | append: site.linkedin_username | append: '",' %}
-{% endif %}
-
-<script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "Organization",
-  "name": "{{ site.name }}",
-  "description": "{{ site.description }}",
-  "url": "{{ site.url }}{{site.baseurl}}/",
-  "logo": {
-      "@type": "ImageObject",
-      "url": "{{ site.url }}{{site.baseurl}}/assets/img/icons/mediumtile.png",
-      "width": "600",
-      "height": "315"
-  },
-  "sameAs": [
-    {{ social_urls | split: "," | join: "," }}
-  ]
-}
-</script>
-
-<!-- Include the script that allows Netlify CMS login -->
-<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-
-<!-- Include the website scripts -->
-<script src="{{ '/assets/js/scripts.min.js' | prepend: site.baseurl }}"></script>
-
-<!-- Include Google Analytics script -->
-{% include stats.html %}
-
-<!-- Include extra scripts -->
-{% include extra-js.html %}
+	</body>
+</html>

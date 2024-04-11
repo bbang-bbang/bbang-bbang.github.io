@@ -1,27 +1,25 @@
-<header class="bar-header">
-    <a id="menu" role="button">
-        <svg id="open" class="icon-menu"><use xlink:href="#icon-menu"></use></svg>
-    </a>
-    <h1 class="logo">
-        <a href="{{ site.baseurl }}/">
-            {% if site.use_logo %}
-                {% include logo.html %}
-            {% else %}
-                {{ site.name }} <span class="version">{{ site.version }}</span>
-            {% endif %}
-        </a>
-    </h1>
-    <a id="search" class="dosearch" role="button">
-        <svg class="icon-search"><use xlink:href="#icon-search"></use></svg>
-    </a>
-    {% if site.show_get_theme_btn %}
-        <a href="https://github.com/thiagorossener/jekflix-template" class="get-theme" role="button">
-            Get this theme!
-        </a>
-    {% endif %}
-</header>
-
-<div id="mask" class="overlay"></div>
-
-{% include menu.html %}
-{% include search.html %}
+<!DOCTYPE HTML>
+<!--
+	Dopetrope by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Dopetrope by HTML5 UP</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="{{ site.baseurl }}/assets/css/ie/html5shiv.js"></script><![endif]-->
+		<script src="{{ site.baseurl }}/assets/js/jquery.min.js"></script>
+		<script src="{{ site.baseurl }}/assets/js/jquery.dropotron.min.js"></script>
+		<script src="{{ site.baseurl }}/assets/js/skel.min.js"></script>
+		<script src="{{ site.baseurl }}/assets/js/skel-layers.min.js"></script>
+		<script src="{{ site.baseurl }}/assets/js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/assets/css/skel.css" />
+			<link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/assets/css/style.css" />
+			<link rel="stylesheet" href="{{ site.url }}{{ site.baseurl }}/assets/css/style-desktop.css" />
+		</noscript>
+		<!--[if lte IE 8]><link rel="stylesheet" href="{{ site.baseurl }}/assets/css/ie/v8.css" /><![endif]-->
+	</head>
