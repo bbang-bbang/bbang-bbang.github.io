@@ -19,8 +19,10 @@ menu:
     url: /about
   - title: Contact
     url: /contact
-  - title: Feed
-    url: /feed.xml
+  - title: Security
+    url: /security
+  # - title: Feed
+    # url: /feed.xml
 email: martusbang@naver.com
 # See: https://disqus.com/
 disqus_username: disqus_username
