@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:900">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: white;
+        }
+        
+        #timer {
+            color: #eeeeee;
+            text-align: center;
+            text-transform: uppercase;
+            font-family: 'Lato', sans-serif;
+            font-size: .7em;
+            letter-spacing: 5px;
+        }
+        
+        .days,
+        .hours,
+        .minutes,
+        .seconds {
+            display: inline-block;
+            padding: 20px;
+            width: 100px;
+            border-radius: 5px;
+        }
+        
+        .days {
+            background: #003b8f;
+        }
+        
+        .hours {
+            background: #eeeeee;
+            color: #183059;
+        }
+        
+        .minutes {
+            background: #276FBF;
+        }
+        
+        .seconds {
+            background: #003b8f;
+        }
+        
+        .numbers {
+            font-family: 'Montserrat', sans-serif;
+            color: #dadada;
+            font-size: 4em;
+            text-align: center;
+        }
+        
+        .hours_txt {
+            font-family: 'Montserrat', sans-serif;
+            color: #276FBF;
+            font-size: 4em;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="timer">
+        <div class="days">
+            <div id="days" class="numbers"> </div>days</div>
+        <div class="hours">
+            <div id="hours" class="hours_txt"> </div>hours</div>
+        <div class="minutes">
+            <div id="minutes" class="numbers"> </div>minutes</div>
+        <div class="seconds">
+            <div id="seconds" class="numbers"> </div>seconds</div>
+    </div>
+
+    <script>
+        // URL에서 날짜 정보 추출
+        const path = window.location.pathname;
+        const dateStr = path.split('/').pop(); // 마지막 '/' 이후의 문자열 추출
+        const dateParts = dateStr.split('-');
+
+        // 날짜 형식이 올바른지 확인
+        if (dateParts.length === 3) {
+            const year = dateParts[0];
+            const month = dateParts[1];
+            const day = dateParts[2];
+
+            // 추출한 날짜로 Date 객체 생성
+            const myDate = new Date(`${year}-${month}-${day}T00:00:00`);
+
+            // 카운트다운 설정
+            let timer = setInterval(function() {
+                const today = new Date().getTime();
+                const diff = myDate - today;
+
+                let days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                let hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                let seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+                document.getElementById("days").innerHTML = days;
+                document.getElementById("hours").innerHTML = hours;
+                document.getElementById("minutes").innerHTML = minutes;
+                document.getElementById("seconds").innerHTML = seconds;
+            }, 1000);
+        } else {
+            console.error("Invalid date format in URL");
+        }
+    </script>
+
+</body>
+
+</html>
